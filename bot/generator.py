@@ -64,7 +64,7 @@ class TweetGenerator:
             response = self.client.messages.create(
                 model=config.CLAUDE_MODEL,
                 max_tokens=400,
-                temperature=0.9,
+                temperature=0.85,
                 system=self._build_system_prompt(),
                 messages=[{"role": "user", "content": user_prompt}],
             )
